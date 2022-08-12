@@ -1,22 +1,16 @@
 
-function MessageCard() {
+function MessageCard({quotes}) {
+
     return (
         <>
-            <div>
-                <h2>Bad Bunny </h2>
+        {quotes && quotes.map((quote)=>(
+            <div className="posted-quote">
+            <h3>{quote.name}</h3>
+            <p>{quote.description}</p>
             </div>
-
-            <div>
-                <h2>Bob Marley</h2>
-            </div>
-
-            <div>
-                <h2>Frank Zappa</h2>
-            </div>
-
-            <div>
-                <h2>Beethoven</h2>
-            </div>
+            
+        ))}
+   
         </>
     )
 }
