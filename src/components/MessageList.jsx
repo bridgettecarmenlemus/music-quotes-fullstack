@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function MessageList() {
   const [quotes, setQuotes] = useState('');
   useEffect(() => {
-    fetch("https://what-state-rv.uk.r.appspot.com/states")
+    fetch("https://music-quotes-fullstack-app.web.app/quotes")
       .then((res) => res.json())
       .then((data) => setQuotes(data))
       .catch((err) => console.error(err));
@@ -14,7 +14,9 @@ function MessageList() {
 
   return (
     <>
-      <MessageCard quotes={quotes} />
+      <div class='messagecard'>
+        <MessageCard quotes={quotes} />
+      </div>
     </>
   );
 }
