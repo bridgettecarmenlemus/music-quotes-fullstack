@@ -1,32 +1,22 @@
-import MessageList from './components/MessageList';
-import './App.css';
-
-const quoteElement = document.querySelector("#menu")
-
-fetch("https://music-quotes-fullstack-app.web.app/")
-    .then((res) => res.json())
-    .then((quoteItems) => {
-        let element = " "
-        quoteItems.forEach(
-            (quotes) => {
-            let htmlSegment = 
-            `<div class="quote-item">
-            <h3>${quotes.name}</h3>
-            <p> ${quotes.quote}</p>
-        </div>`
-            element += elementSegment
-        })
-
-        quoteElement.innerHTML = html
-    })
-    .catch(err => console.error(err))
+import { useEffect, useState } from "react";
+import MessageList from "./components/MessageList";
+import "./App.css";
 
 function App() {
+  const [quotes, setQuotes] = useState();
+  useEffect(() => {
+    fetch("https://what-state-rv.uk.r.appspot.com/states")
+      .then((res) => res.json())
+      .then((data) => setQuotes(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <>
-      <MessageList /> 
+      <MessageList />
     </>
   );
 }
 
 export default App;
+
