@@ -1,5 +1,5 @@
 
-function MessageCard({quotes}) {
+function MessageCard(quotes) {
 
     return (
         <section>

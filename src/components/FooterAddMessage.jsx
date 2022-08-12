@@ -1,9 +1,13 @@
-function FooterAddMessage () {
+
+function FooterAddMessage ({setQuotes}) {
+
     return (
     <>
-        <div>
-            <h1>put form here</h1>
-        </div>
+        <form>
+            <input value={quotes.name} name="Name" id="" />
+            <input value={quotes.quote} name="Name" id="" />
+            <button onClick={}>Submit</button>
+        </form>
     </>
     )
 }
