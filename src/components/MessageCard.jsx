@@ -4,6 +4,7 @@ function MessageCard() {
         <>
             <div>
                 <h2>Bad Bunny </h2>
+                <input type="text" name="" id="" />
             </div>
 
             <div>
