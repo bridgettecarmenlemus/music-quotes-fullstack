@@ -1,8 +1,10 @@
+import MessageCard from "./MessageCard"
+
 
 function MessageList () {
     return (
         <>
-        
+          <MessageCard /> 
         </>
     )
 }

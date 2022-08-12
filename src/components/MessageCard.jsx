@@ -2,9 +2,13 @@
 function MessageCard() {
     return (
         <>
-            <body>
+            <div>
+                <h2>Bad Bunny </h2>
+                <h2>Bob Marley</h2>
+                <h2>Frank Zappa</h2>
+                <h2>Beethoven</h2>
                 
-            </body>
+            </div>
         </>
     )
 }
